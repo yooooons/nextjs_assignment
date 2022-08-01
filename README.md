@@ -1,34 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+정부 교육관련 오픈 API접속후  
+Next.js를 사용하여 학교 정보 데이터 불러오기
+===  
 
-## Getting Started
 
-First, run the development server:
+### GET localhost:3000/assignment/{페이지넘버}/{교육지원청이름}  
+* 총 30개의 리스트로 교육지원청과 매치해서 소속학교를 보여준다.
+* 페이지넘버를 통해서 다음 페이지의 30개의 리스트를 볼수있다.
+* 페이지넘버 = "1" 이상의 정수   
+ex)1, 2 ,3 ...
+* 교육지원청이름 = 찾고싶은 교육지원청 이름   
+ex) 서울특별시강서양천교육지원청, 경상남도창원교육지원청...  
 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![image](https://user-images.githubusercontent.com/96519249/182142084-414d6116-7c39-45f9-89f0-58031b2f9cfc.png)
+#### "assignment/1/경상남도창원교육지원청" 에서 "교육지원청에 소속된 학교 검색하기" 버튼을 클릭할시
+![image](https://user-images.githubusercontent.com/96519249/182142972-6155018f-505c-4fac-9072-2dec62606121.png)
+#### 30개의 size인 페이지를 테이블로 확인할 수 있습니다. 
+![image](https://user-images.githubusercontent.com/96519249/182142829-013c9c76-6ef5-4fb7-87f1-0d7ab20ff276.png)
+#### 마찬가지로, "assignment/2/경상남도창원교육지원청" 에 접근하여 페이지 넘버를 통해서 다음 페이지의 리스트들을 확인할 수 있습니다.
